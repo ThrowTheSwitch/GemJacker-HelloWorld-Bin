@@ -21,7 +21,7 @@ Jeweler::Tasks.new do |gem|
   gem.description = %Q{Example showing basic usage of GemJacker}
   gem.email = "john.vanenk@atomicembedded.com"
   gem.authors = ["John Van Enk"]
-  gem.files = FileList['files/**']
+  gem.files = FileList['files/**/*']
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
