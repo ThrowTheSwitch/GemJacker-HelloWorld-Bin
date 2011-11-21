@@ -18,9 +18,10 @@ Jeweler::Tasks.new do |gem|
   gem.homepage = "http://github.com/sw17ch/gemjacker-helloworld"
   gem.license = "MIT"
   gem.summary = %Q{GemJacker hello world.}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.description = %Q{Example showing basic usage of GemJacker}
   gem.email = "john.vanenk@atomicembedded.com"
   gem.authors = ["John Van Enk"]
+  gem.files = FileList['files/**']
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
@@ -41,7 +42,7 @@ Cucumber::Rake::Task.new(:features)
 
 task :default => :spec
 
-require 'rake/rdoctask'
+require 'rdoc/task'
 Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
