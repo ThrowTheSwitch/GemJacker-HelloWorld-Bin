@@ -1,6 +1,5 @@
 # encoding: utf-8
 
-require 'rubygems'
 require 'bundler'
 begin
   Bundler.setup(:default, :development)
@@ -14,14 +13,14 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "gemjacker-helloworld"
-  gem.homepage = "http://github.com/sw17ch/gemjacker-helloworld"
+  gem.name = "gemjacker-helloworld-bin"
+  gem.homepage = "http://github.com/sw17ch/gemjacker-helloworld-bin"
   gem.license = "MIT"
-  gem.summary = %Q{GemJacker hello world.}
-  gem.description = %Q{Example showing basic usage of GemJacker}
+  gem.summary = %Q{GemJacker example for showing how to deploy binaries.}
+  gem.description = %Q{Example showing basic usage of GemJacker for binaries.}
   gem.email = "john.vanenk@atomicembedded.com"
   gem.authors = ["John Van Enk"]
-  gem.files = FileList['files/**/*']
+  gem.files += FileList['files/**/*']
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
@@ -50,4 +49,10 @@ Rake::RDocTask.new do |rdoc|
   rdoc.title = "gemjacker-helloworld #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
+end
+
+# Build the example executable
+desc "Build the 'Hello World' executable."
+task "build_executable" do
+  system("gcc files/bin/gemjacker-helloworld-bin.c -o files/bin/gemjacker-helloworld-bin")
 end
