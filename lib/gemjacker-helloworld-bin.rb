@@ -9,7 +9,7 @@ module GemJacker
 
       search_path = File.expand_path(File.join(here, there))
 
-      GemJacker::ExecutablePaths.add_path(search_path)
+      GemJacker::ExecutablePaths.add_path(search_path, priority)
     end
   end
 end
