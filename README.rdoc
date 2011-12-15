@@ -1,16 +1,15 @@
-= gemjacker-helloworld
+= gemjacker-helloworld-bin
 
-Description goes here.
+An example program showing how to ship an executable and hook it into the
+GemJacker system.
 
-== Contributing to gemjacker-helloworld
- 
-* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
-* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
-* Fork the project
-* Start a feature/bugfix branch
-* Commit and push until you are happy with your contribution
-* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
-* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+Take a look at example/rake_test.rb to see how to invoke the GemJacker
+system and how to call the binary.
+
+NOTE: The binary is not included in the repository. Building it requies that
+GCC be in your path. Build it with the following command:
+
+> rake build_executable
 
 == Copyright
 
